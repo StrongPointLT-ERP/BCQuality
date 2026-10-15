@@ -11,7 +11,7 @@ application-area: [all]
 
 ## Description
 
-Table field names are limited to 30 characters (compiler rule AL0468), and StrongPoint's `sp.ruleset.json` raises AL0468 to an **error**. Because extension fields must start with `SPU ` plus the app code (for example `SPU FB `), only about 23–26 characters remain for the descriptive part. Generated names routinely exceed the limit and break the build.
+Table field names are limited to 30 characters (compiler rule AL0468), and StrongPoint's `sp.ruleset.json` raises AL0468 to an **error**. Because extension fields must start with the app's prefix plus the app code (for example `SPU FB ` in an AppSource-template app, `SP ` in a custom one), only about 23–26 characters remain for the descriptive part. Generated names routinely exceed the limit and break the build.
 
 ## Best Practice
 
@@ -19,7 +19,7 @@ Count the full field name, prefix and spaces included, before proposing it; abbr
 
 ## Anti Pattern
 
-A field such as `"SPU FB Fiscal Receipt Printed Date Time"` (39 characters), or dropping the `SPU` prefix to make a name fit.
+A field such as `"SPU FB Fiscal Receipt Printed Date Time"` (39 characters), or dropping the prefix to make a name fit.
 
 ## References
 
